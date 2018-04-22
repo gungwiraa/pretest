@@ -24,12 +24,21 @@
                 <a href="#" class="btn btn-success">
                     <i class="fa fa-pencil"></i>
                 </a>
-                <a href="#" class="btn btn-danger">
-                    <i class="fa fa-trash"></i>
-                </a>
+                <form action="{{route('item.destroy',$item)}}" method="post">
+                    @csrf 
+                    @method('DELETE')
+                    <button type="submit" class=" btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </button>
+
+
+                </input>
+                </form>
+
             </td>
         </tr>
         @endforeach
     </table>
-    
+
 @endsection
+            
